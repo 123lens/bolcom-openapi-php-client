@@ -143,12 +143,15 @@ class Client
         }
         if (!empty($offers)) {
             $queryParams .= $separator . 'offers=' . urlencode($offers);
+            $separator = '&';
         }
         if (!empty($searchfield)) {
             $queryParams .= $separator . 'searchfield=' . urlencode($searchfield);
+            $separator = '&';
         }
         if (!empty($pids)) {
             $queryParams .= $separator . 'pids=' . urlencode($pids);
+            $separator = '&';
         }
         $queryParams .= $separator . 'dataoutput=';
         if (!empty($includeProducts)) {
